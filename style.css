@@ -2,5 +2,5 @@ body{
     background-image: url('./bg.jfif');
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    height: 100vh;
 }
