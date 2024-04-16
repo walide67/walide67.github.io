@@ -25,7 +25,6 @@ $(".overlap .dismiss").on("click", function(){
 });
 
 function dismissOverlap(elem){
-    console.log(elem);
     elem.closest('.overlap-body').css('display', 'none');
     elem.closest('.overlap-body .skill-item').css('display', 'none!important');
     elem.closest('.overlap-shadow').css('display', 'none');
