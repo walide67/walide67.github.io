@@ -66,3 +66,7 @@ a{
     background-color: white;
     display: none;
 }
+
+.card .overlap .dismiss{
+    font-size: 18px;
+}
