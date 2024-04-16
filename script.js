@@ -14,7 +14,7 @@ $(".menu-item").on("click", function(){
         $('.overlap-body', "#"+target).css('display', 'flex');
         let timeout = setTimeout(function(){
             $('.overlap-shadow', "#"+target).css('display', 'block');
-            $('.overlap-body .skill-item', "#"+target).css('display', 'flex');
+            $('.overlap-body .skill-item', "#"+target).css('display', 'flex!important');
 
         }, 700);
     }
@@ -25,7 +25,7 @@ $(".overlap .dismiss").on("click", dismissOverlap($(this)));
 
 function dismissOverlap(thi){
     thi.closest('.overlap-body').css('display', 'none');
-    thi.closest('.overlap-body .skill-item').css('display', 'none');
+    thi.closest('.overlap-body .skill-item').css('display', 'none!important');
     thi.closest('.overlap-shadow').css('display', 'none');
     thi.closest('.overlap').css('width', '0');
 }
