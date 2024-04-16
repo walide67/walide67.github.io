@@ -1,6 +1,7 @@
 $(".menu-item").on("click", function(){
     let target = $(this).attr('data-target');
-    if($(this).removeClass('active')){
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
         dismissOverlap($("#"+target))
     }else{
         $('.overlap').css("width", "0");
