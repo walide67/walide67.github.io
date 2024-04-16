@@ -69,6 +69,7 @@ a{
     height: 100%;
     display: none;
     transition-delay: 700ms;
+    transition-timing-function: ease-in-out;
     position: relative;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
