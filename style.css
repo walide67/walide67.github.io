@@ -91,3 +91,11 @@ a{
     font-size: 24px;
     cursor: pointer;
 }
+
+.card .overlap .overlap-body .skill-item{
+    margin: 10px 0;
+}
+
+.card .overlap .overlap-body .skill-item span{
+    margin-left: 10px;
+}
