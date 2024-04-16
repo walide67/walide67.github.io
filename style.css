@@ -61,9 +61,15 @@ a{
     top: 0;
     left: 0;
     transition: all 700ms;
-    height: 0;
     width: 0;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.card .overlap .overlap-shadow{
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -72,6 +78,8 @@ a{
     height: 100%;
     background-color: white;
     padding: 10px;
+    display: none;
+    z-index: 2;
 }
 
 .card .overlap .dismiss{
