@@ -43,9 +43,9 @@ a{
 .card .menu .menu-item:hover{
     left: -150px;
     width: 150px;
+    justify-content: flex-start;
 }
 
 .card .menu .menu-item:hover span{
     display: inline-block;
-    justify-content: flex-start;
 }
