@@ -1,6 +1,6 @@
 $(".menu-item").on("click", function(){
     let target = $(this).attr('data-target');
-    $('overlap').css("display", "none");
+    $('.overlap').css("display", "none");
     console.log(target)
     $("#"+target).css('display', 'flex');
 });
