@@ -4,10 +4,9 @@ $(".menu-item").on("click", function(){
         $(this).removeClass('active');
         dismissOverlap($("#"+target))
     }else{
-        $('.overlap').css("width", "0");
         $('.overlap .overlap-body').css("display", "none");
         $('.overlap .overlap-shadow').css("display", "none");
-
+        $('.overlap').css("width", "0");
         $('.menu-item.active').removeClass('active');
         $(this).addClass('active');
 
@@ -15,6 +14,8 @@ $(".menu-item").on("click", function(){
         $('.overlap-body', "#"+target).css('display', 'flex');
         let timeout = setTimeout(function(){
             $('.overlap-shadow', "#"+target).css('display', 'block');
+            $('.overlap-body .skill-item', "#"+target).css('display', 'flex');
+
         }, 700);
     }
     
@@ -23,7 +24,8 @@ $(".menu-item").on("click", function(){
 $(".overlap .dismiss").on("click", dismissOverlap($(this)));
 
 function dismissOverlap(thi){
-    thi.closest('.overlap').css('width', '0');
     thi.closest('.overlap-body').css('display', 'none');
+    thi.closest('.overlap-body .skill-item', "#"+target).css('display', 'none');
     thi.closest('.overlap-shadow').css('display', 'none');
+    thi.closest('.overlap').css('width', '0');
 }
