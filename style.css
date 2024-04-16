@@ -9,3 +9,17 @@ a{
     font-size: 30px;
     color: unset;
 }
+
+.card{
+    position: relative;
+}
+
+.card .menu-item{
+    position: absolute;
+    left: -50px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    transition: all 400ms;
+}
