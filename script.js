@@ -23,7 +23,6 @@ $(".menu-item").on("click", function(){
 $(".overlap .dismiss").on("click", dismissOverlap($(this)));
 
 function dismissOverlap(thi){
-    $(this).removeClass('active');
     thi.closest('.overlap').css('width', '0');
     thi.closest('.overlap-body').css('display', 'none');
     thi.closest('.overlap-shadow').css('display', 'none');
