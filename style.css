@@ -63,6 +63,7 @@ a{
     transition: all 700ms;
     width: 0;
     height: 100%;
+    overflow: hidden;
 }
 .card .overlap .overlap-shadow{
     width: 100%;
