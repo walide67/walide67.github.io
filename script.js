@@ -14,7 +14,7 @@ $(".menu-item").on("click", function(){
         $('.overlap-body', "#"+target).css('display', 'flex');
         let timeout = setTimeout(function(){
             $('.overlap-shadow', "#"+target).css('display', 'block');
-            $('.overlap-body .skill-item', "#"+target).css('display', 'flex!important');
+            $('.skill-item', "#"+target).css('display', 'flex!important');
 
         }, 700);
     }
