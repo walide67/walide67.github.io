@@ -20,7 +20,9 @@ $(".menu-item").on("click", function(){
     
 });
 
-$(".overlap .dismiss").on("click", dismissOverlap);
+$(".overlap .dismiss").on("click", function(){
+    dismissOverlap($(this))
+});
 
 function dismissOverlap(elem){
     console.log(elem);
