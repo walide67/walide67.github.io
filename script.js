@@ -22,9 +22,10 @@ $(".menu-item").on("click", function(){
 
 $(".overlap .dismiss").on("click", dismissOverlap($(this)));
 
-function dismissOverlap(thi){
-    thi.closest('.overlap-body').css('display', 'none');
-    thi.closest('.overlap-body .skill-item').css('display', 'none!important');
-    thi.closest('.overlap-shadow').css('display', 'none');
-    thi.closest('.overlap').css('width', '0');
+function dismissOverlap(elem){
+    console.log(elem);
+    elem.closest('.overlap-body').css('display', 'none');
+    elem.closest('.overlap-body .skill-item').css('display', 'none!important');
+    elem.closest('.overlap-shadow').css('display', 'none');
+    elem.closest('.overlap').css('width', '0');
 }
