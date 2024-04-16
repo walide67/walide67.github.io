@@ -13,6 +13,7 @@ a{
 .card{
     position: relative;
     z-index: 10;
+    border: 0px;
 }
 
 .card .menu{
