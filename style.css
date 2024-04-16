@@ -94,7 +94,7 @@ a{
 
 .card .overlap .overlap-body .skill-item{
     margin: 10px 0;
-    display: none!important;
+    display: flex!important;
 }
 
 .card .overlap .overlap-body .skill-item span:not('.year'),
