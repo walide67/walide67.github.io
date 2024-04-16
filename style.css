@@ -54,8 +54,3 @@ a{
 .card .menu .menu-item:hover span{
     display: inline-block;
 }
-
-.card .menu .menu-item:hover svg{
-    width: 20px;
-    height: 20px;
-}
