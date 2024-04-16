@@ -14,7 +14,12 @@ a{
     position: relative;
 }
 
-.card .menu-item{
+.card .menu{
+    z-index: 2;
+}
+
+.card .menu .menu-item{
+    z-index: 1;
     position: absolute;
     left: -50px;
     width: 150px;
