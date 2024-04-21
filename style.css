@@ -41,7 +41,8 @@ a{
     display: none;
 }
 
-.card .menu .menu-item svg{
+.card .menu .menu-item svg,
+.card .mobile-menu .menu-item svg{
     width: 40px;
     height: 40px;
 }
