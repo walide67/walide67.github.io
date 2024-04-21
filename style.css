@@ -101,3 +101,7 @@ a{
     .card .overlap .overlap-body .skill-item small{
     margin-left: 10px;
 }
+
+.card .mobile-menu{
+    display: none;
+}
