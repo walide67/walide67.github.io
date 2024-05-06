@@ -19,12 +19,22 @@ var config = {
 }
 
 if(screenWidth < 650){
+    var lastScrollTop = 0;
     config.minSize = 0.5
     config.maxSize = 70
     config.maxSize = 70
     config.playTimeout = 400
     document.querySelector('.action-btn .options').style.display = 'none';
     document.querySelector('.copyright').style.width = '90%';
+    document.addEventListener("scroll", function(event){ // or window.addEventListener("scroll"....
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+            onWheel(event, false);
+        } else if (st < lastScrollTop) {
+            onWheel(event, true);
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+     }, false);
 }
 var playInterval = null;
     document.addEventListener('wheel', onWheel, {passive: false})
