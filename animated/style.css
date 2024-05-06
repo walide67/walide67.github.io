@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #3ca2fb;
+    overflow: hidden;
+}
+
+.copyright{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: none;
+}
+
+.content p{
+    font-size: 2.1rem;
+    line-height: 1;
+    -webkit-text-stroke: 1px rgb(254, 254, 254);
+    color: transparent;
+    /* line-height: 100%; */
+    text-align: center;
+    perspective: 30000
+}
+
+.content p small{
+    font-size: 0.8rem;
+    line-height: 1;
+    display: block;
+    -webkit-text-stroke: 1px rgb(254, 254, 254);
+    color: transparent;
+    line-height: 100%;
+    text-align: center;
+}
+
+.content img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 15px auto;
+    -webkit-box-reflect: below 3px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.3));
+}
+
+.content p svg{
+    display: block;
+    width: 35px;
+    margin: 5px auto;
+    height: 35px;
+}
+
+.content p:not(.active){
+    display: none;
+}
+
+.action-btn{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    z-index: 10;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.float-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.float-btn svg#stop,
+.float-btn svg#restart{
+    display: none;
+}
+
+.action-btn .options{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+    max-width: 300px;
+}
+
+
+@media(max-width: 650px){
+    .content p{
+        font-size: 0.5rem;
+    }
+    
+    .content p small{
+        font-size: 0.3rem;
+    }
+
+    .action-btn .options,
+    .copyright{
+        font-size: 14px;
+    }
+}
