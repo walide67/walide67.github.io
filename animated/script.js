@@ -14,7 +14,7 @@ var config = {
     domSizeUnit: 'px',
     fontSizeRatio: 0.5,
     sizeRatio: 5,
-    bgColor: "#3ca2fb",
+    bgColor: "#2b6da7ff",
     playTimeout: 200
 }
 
