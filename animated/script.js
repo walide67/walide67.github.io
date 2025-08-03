@@ -7,6 +7,17 @@ var playSvg = document.getElementById('play');
 var restartSvg = document.getElementById('restart');
 var restartStatus = false;
 
+var glope = VANTA.GLOBE({
+  el: "body",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
+})
+
 var config = {
     minSize: 35,
     maxSize: 150,
@@ -147,7 +158,10 @@ function restart(){
         svg.style.width = "35px"
         svg.style.height = "35px"
     }
-    document.body.style.backgroundColor = config.bgColor;
+    //document.body.style.backgroundColor = config.bgColor;
+    glope.setOptions({
+        backgroundColor: config.bgColor
+    })
     document.querySelector('.content .active').classList.remove('active');
     let fisrtP = document.querySelector('.content p');
     fisrtP.classList.add('active');
@@ -173,7 +187,10 @@ function increase(dom){
         if( sectionHistory.filter(section => section.name === dom.querySelector('.text').innerHTML).length === 0){
             let color = getDarkColor();
             sectionHistory.push({name :  dom.querySelector('.text').innerHTML, color: color })
-            document.body.style.backgroundColor = color;
+            //document.body.style.backgroundColor = color;
+            glope.setOptions({
+                backgroundColor: color
+            })
         }
     }
 }
@@ -199,9 +216,15 @@ function decrease(dom){
         let section = sectionHistory.find(section => section.name === dom.querySelector('.text').innerHTML);
         if(sectionHistory.length > 0 &&  section !== undefined){
             sectionHistory = sectionHistory.filter(s => s.name !== section.name)
-            document.body.style.backgroundColor = sectionHistory.slice(-1)[0].color;
+            //document.body.style.backgroundColor = sectionHistory.slice(-1)[0].color;
+            glope.setOptions({
+                backgroundColor: sectionHistory.slice(-1)[0].color
+            })
         }else if(sectionHistory.length === 0){
-            document.body.style.backgroundColor = config.bgColor;
+            //document.body.style.backgroundColor = config.bgColor;
+            glope.setOptions({
+                backgroundColor: config.bgColor
+            })
         }
     }
 
