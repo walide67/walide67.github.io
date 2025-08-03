@@ -80,6 +80,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+.home-link{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
 
 .float-btn{
     width: 50px;
