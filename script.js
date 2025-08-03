@@ -32,7 +32,7 @@ function dismissOverlap(elem){
 }
 
 VANTA.GLOBE({
-  el: "#your-element-selector",
+  el: "body",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
@@ -41,6 +41,5 @@ VANTA.GLOBE({
   scale: 1.00,
   scaleMobile: 1.00,
   color: 0x97ff,
-  size: 0.90,
   backgroundColor: 0x0
 })
