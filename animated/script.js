@@ -50,6 +50,7 @@ if(screenWidth < 650){
 }
 var playInterval = null;
     document.addEventListener('wheel', onWheel, {passive: false})
+    document.addEventListener('scroll', onWheel, {passive: false})
     document.addEventListener('keydown', function(event){
         if(event.key === "ArrowUp" || event.key === "ArrowDown"){
             onWheel(event)
