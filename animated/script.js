@@ -26,6 +26,7 @@ var config = {
     fontSizeRatio: 0.5,
     sizeRatio: 5,
     bgColor: "#2b6da7ff",
+    lightColor: '0xff0040',
     playTimeout: 200
 }
 
@@ -160,7 +161,8 @@ function restart(){
     }
     //document.body.style.backgroundColor = config.bgColor;
     glope.setOptions({
-        backgroundColor: config.bgColor
+        backgroundColor: config.bgColor,
+        color: config.lightColor,
     })
     document.querySelector('.content .active').classList.remove('active');
     let fisrtP = document.querySelector('.content p');
@@ -186,10 +188,12 @@ function increase(dom){
     if(dom.classList.contains("new-section")){
         if( sectionHistory.filter(section => section.name === dom.querySelector('.text').innerHTML).length === 0){
             let color = getDarkColor();
-            sectionHistory.push({name :  dom.querySelector('.text').innerHTML, color: color })
+            let lightColor = getLightColor();
+            sectionHistory.push({name :  dom.querySelector('.text').innerHTML, color: color, lightColor: lightColor })
             //document.body.style.backgroundColor = color;
             glope.setOptions({
-                backgroundColor: color
+                backgroundColor: color,
+                color: lightColor
             })
         }
     }
@@ -218,12 +222,14 @@ function decrease(dom){
             sectionHistory = sectionHistory.filter(s => s.name !== section.name)
             //document.body.style.backgroundColor = sectionHistory.slice(-1)[0].color;
             glope.setOptions({
-                backgroundColor: sectionHistory.slice(-1)[0].color
+                backgroundColor: sectionHistory.slice(-1)[0].color,
+                color: sectionHistory.slice(-1)[0].lightColor
             })
         }else if(sectionHistory.length === 0){
             //document.body.style.backgroundColor = config.bgColor;
             glope.setOptions({
-                backgroundColor: config.bgColor
+                backgroundColor: config.bgColor,
+                color: config.lightColor,
             })
         }
     }
@@ -242,5 +248,15 @@ function getDarkColor() {
         color += Math.floor(Math.random() * 10);
     }
     return color;
+}
+
+function getLightColor() {
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    // Limit to hex values that result in lighter colors (e.g., 8-F for each hex digit)
+    const randomDigit = Math.floor(Math.random() * 8 + 8).toString(16); // 8-F in hex
+    color += randomDigit;
+  }
+  return color;
 }
 
